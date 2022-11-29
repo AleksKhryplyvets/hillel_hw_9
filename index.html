@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hw-9</title>
+  </head>
+  <body>
+    <script>
+      // cloneObj(obj) // вернет копию объекта (не используя методов, пишем свой)
+
+      function cloneObj(obj) {
+        const newObj = {};
+        for (keys in obj) {
+          newObj[keys] = obj[keys];
+        }
+        return newObj;
+      }
+
+      cloneObj(obj);
+
+      // getValues(obj) // вернет массив значений из объекта
+
+      function getValues(obj) {
+        let newArr = [];
+        for (keys in obj) {
+          newArr.push(obj[keys]);
+        }
+        return newArr;
+      }
+
+      getValues(obj);
+
+      // getKeys(obj) // вернет массив ключей из объекта
+
+      function getKeys(obj) {
+        let newArr = [];
+        for (keys in obj) {
+          newArr.push(keys);
+        }
+        return newArr;
+      }
+
+      getKeys(obj);
+
+      // getEntries(obj) // вернет массив, который будет состоять из массивов, где 0 элемент - ключ, а 1 - значение
+
+      function getEntries(obj) {
+        let newArr = [];
+        for (keys in obj) {
+          newArr.push([keys, obj[keys]]);
+        }
+        return newArr;
+      }
+
+      getEntries(obj);
+    </script>
+  </body>
+</html>
